@@ -6,6 +6,8 @@
     <title>About us</title>
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
      <link rel="stylesheet" href="style2.css">
+     <!-- AOS Animation CSS -->
+     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
 </head>
 <body>
      <nav class="navbar navbar-expand-lg  bg-body-tertiary fixed-top">
@@ -56,46 +58,88 @@
 
 <!-- ======= Hero Section ======= -->
 <section class="hero-section">
-  <div class="hero-content"></div>
- <div class="carousel-inner" style=" height: 500px;">
-    <div class="carousel-item active">
-      <img src="hsimg3.png" class="d-block w-100 "style=" height: 450px; margin-top:90px" alt="...">
+  <div class="carousel-inner" style="height: 500px;">
+    <div class="carousel-item active position-relative">
+      <img src="about us image/ab2.jpg" class="d-block w-100" style="height: 450px; margin-top: 90px;" alt="...">
+
       
-      <div class="carousel-caption">
-        <h1 class="fw-bold align-items-center">About us</h1>
-        <p class="fs-4 fs-md-5" style="margin-bottom: 150px;">Home • About us</p>
+      <div class="hero-overlay">
+
+      <div class="carousel-caption d-flex flex-column justify-content-center align-items-center text-center">
+        <h1 class="fw-bold" Data-aos="fade-down">About us</h1>
+        <p class="fs-4" Data-aos="fade-up" style="margin-bottom: 150px;">Home • About us</p>
       </div>
     </div>
-  </section>
+  </div>
+  </div>
+</section>
+
 
 <div class="container my-5">
   <div class="row align-items-start">
-    <!-- Who We Are -->
-    <div class="col-md-6 mb-4 mb-md-0">
-      <h2 class="fw-bold mb-3">Who We Are</h2>
-      <p>
+    <!-- Who We Are --> 
+    <div class="col-md-6 ">
+      <h2 class="fw-bold mb-3" Data-aos="fade-right">Who We Are</h2>
+      <p Data-aos="fade-up">
         Haile Mariyam Mamo High School is a leading educational institution dedicated to nurturing bright minds and shaping future leaders. Founded with a passion for learning and excellence, our school provides a well-rounded education that combines academic rigor with moral values and practical skills.
       </p>
-      <p>
+      <p Data-aos="fade-up">
         We believe in creating an environment where every student feels valued, inspired, and empowered to achieve their full potential. With qualified teachers, modern learning facilities, and a culture of respect and teamwork, Haile Mariyam Mamo High School stands as a home of excellence and growth for every learner.
       </p>
     </div>
+    
 
     <!-- Our Mission & Vision -->
-    <div class="col-md-6">
-      <h2 class="fw-bold mb-3">Our Mission & Vision</h2>
-      <p>
+    <div class="col-md-6" stylw="margin-left:100px;">
+      <h2 class="fw-bold mb-3" Data-aos="fade-left">Our Mission & Vision</h2>
+      <p Data-aos="fade-up">
         Our mission is to provide high-quality education that builds intellectual, emotional, and social competence in every student. We aim to prepare our learners to meet global challenges with creativity, confidence, and integrity.
       </p>
-      <p>
+      <p Data-aos="fade-up">
         Haile Mariyam Mamo High School envisions a community where education transforms lives—where every graduate becomes a responsible citizen, a lifelong learner, and a positive contributor to society. Our vision is to inspire a generation of thinkers, innovators, and leaders who will shape a brighter future for Ethiopia and the world.
       </p>
     </div>
   </div>
-
-
 </div>
+
+ 
+  <h1 class="ourschool" Data-aos="fade-top">Our School</h1>
+<div id="carouselExampleAutoplaying" class="carousel slide bg-section " data-bs-ride="carousel">
+ 
+  <div class="carousel-inner">
+    <div class="carousel-item active ">
+      <div class=" row text-center">
+     <div class="col-md-4 " Data-aos="fade-right"> <img src="about us image/hmm.jpg"  class=" photo-slide img-fluid" alt="..."></div>
+       <div class="col-md-4 " Data-aos="fade-right"> <img src="about us image/aca1.jpeg" class="photo-slide img-fluid" alt="..."></div>
+     <div class="col-md-4 " Data-aos="fade-right"> <img src="about us image/aca2.jpeg" class="photo-slide img-fluid" alt="..."></div>
+    </div>
+    </div>
+    <div class="carousel-item ">
+       <div class=" row text-center">
+     <div class="col-md-4 " Data-aos="fade-top"> <img src="about us image/aca3.jpeg" class="photo-slide  img-fluid" alt="..."></div>
+       <div class="col-md-4 " Data-aos="fade-top"> <img src="about us image/aca4.jpeg" class="photo-slide img-fluid" alt="..."></div>
+     <div class="col-md-4" Data-aos="fade-top"> <img src="about us image/aca5.jpeg" class=" photo-slide img-fluid" alt="..."></div>
+    </div>
+    </div>
+    </div>
+ <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>       
 
 
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true,
+    offset: 100,
+  });
+</script> 
     </body>
