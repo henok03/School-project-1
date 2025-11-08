@@ -66,7 +66,7 @@
       <div class="hero-overlay">
 
       <div class="carousel-caption d-flex flex-column justify-content-center align-items-center text-center">
-        <h1 class="fw-bold" Data-aos="fade-down">About us</h1>
+        <h1 class="fw-bold" Data-aos="fade-up">About us</h1>
         <p class="fs-4" Data-aos="fade-up" style="margin-bottom: 150px;">Home • About us</p>
       </div>
     </div>
@@ -90,7 +90,7 @@
     
 
     <!-- Our Mission & Vision -->
-    <div class="col-md-6" stylw="margin-left:100px;">
+    <div class="col-md-6">
       <h2 class="fw-bold mb-3" Data-aos="fade-left">Our Mission & Vision</h2>
       <p Data-aos="fade-up">
         Our mission is to provide high-quality education that builds intellectual, emotional, and social competence in every student. We aim to prepare our learners to meet global challenges with creativity, confidence, and integrity.
@@ -103,34 +103,122 @@
 </div>
 
  
-  <h1 class="ourschool" Data-aos="fade-top">Our School</h1>
+  <h1 class="text-center" Data-aos="fade-top">Our Experience Advisors</h1>
 <div id="carouselExampleAutoplaying" class="carousel slide bg-section " data-bs-ride="carousel">
  
-  <div class="carousel-inner">
-    <div class="carousel-item active ">
-      <div class=" row text-center">
-     <div class="col-md-4 " Data-aos="fade-right"> <img src="about us image/hmm.jpg"  class=" photo-slide img-fluid" alt="..."></div>
-       <div class="col-md-4 " Data-aos="fade-right"> <img src="about us image/aca1.jpeg" class="photo-slide img-fluid" alt="..."></div>
-     <div class="col-md-4 " Data-aos="fade-right"> <img src="about us image/aca2.jpeg" class="photo-slide img-fluid" alt="..."></div>
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-4 mb-4">
+      <div class="card" style="background-color: darkblue;">
+        <img src="about us image/director.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class= "card-title" style="color: antiquewhite;">Teacher1...</h5>
+          <p class="card-text" style="color: antiquewhite;">The school director.</p>
+        </div>
+      </div>
     </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card"  style="background-color: darkblue;">
+        <img src="about us image/deputy1.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title" style="color: antiquewhite;">Teacher2...</h5>
+          <p class="card-text" style="color: antiquewhite;">The school dupty principal.</p>
+        </div>
+      </div>
     </div>
-    <div class="carousel-item ">
-       <div class=" row text-center">
-     <div class="col-md-4 " Data-aos="fade-top"> <img src="about us image/aca3.jpeg" class="photo-slide  img-fluid" alt="..."></div>
-       <div class="col-md-4 " Data-aos="fade-top"> <img src="about us image/aca4.jpeg" class="photo-slide img-fluid" alt="..."></div>
-     <div class="col-md-4" Data-aos="fade-top"> <img src="about us image/aca5.jpeg" class=" photo-slide img-fluid" alt="..."></div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card" style="background-color: darkblue;">
+        <img src="about us image/deputy2.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title" style="color: antiquewhite;">Teacher3...</h5>
+          <p class="card-text" style="color: antiquewhite;">The school dupty principal</p>
+        </div>
+      </div>
     </div>
-    </div>
-    </div>
- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>       
+  </div>
+</div>
+
+<section class="counter-section"">
+  <div class="counter-box">
+    <img src="about us image/counter1.png" alt="Student Icon" class="counter-img">
+    <span class="counter" data-target="5000">0</span>
+    <p>Satisfied Students</p>
+  </div>
+
+  <div class="counter-box">
+    <img src="about us image/counter4.png" alt="Teacher Icon" class="counter-img">
+    <span class="counter" data-target="200">0</span>
+    <p>Teachers</p>
+  </div>
+</section>
+
+<style>
+.counter-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  text-align: center;
+  margin: 100px 0;
+}
+
+.counter-box {
+  background: none;
+}
+
+.counter-img {
+  width: 80px; /* adjust size */
+  height: 80px;
+  margin-bottom: 10px;
+  filter: invert(72%) sepia(86%) saturate(463%) hue-rotate(0deg) brightness(94%) contrast(95%);
+}
+
+.counter {
+  display: block;
+  font-size: 48px;
+  font-weight: bold;
+  color: #222;
+}
+
+.counter-box p {
+  font-size: 18px;
+  color: #666;
+  margin-top: 5px;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const counters = document.querySelectorAll('.counter');
+  const speed = 200; // smaller = faster
+
+  counters.forEach(counter => {
+    const updateCount = () => {
+      const target = +counter.getAttribute('data-target');
+      const count = +counter.innerText;
+      const increment = target / speed;
+
+      if (count < target) {
+        counter.innerText = Math.ceil(count + increment);
+        setTimeout(updateCount, 10);
+      } else {
+        counter.innerText = target;
+      }
+    };
+
+    const observer = new IntersectionObserver(entries => {
+      if (entries[0].isIntersecting) {
+        updateCount();
+        observer.disconnect();
+      }
+    });
+
+    observer.observe(counter);
+  });
+});
+</script>
 
 
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
