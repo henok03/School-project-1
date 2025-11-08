@@ -1,19 +1,27 @@
 .carousel{
     margin-top: 90px;
+    margin-bottom: 100px;
     
 }
+.carousel-caption .welcome-text{
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 30px;
+  margin-bottom: 110px;
+  position: block;
+  }
 .carousel-caption{
   text-align: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 30px;
-  margin-bottom: 80px;
+  margin-bottom: 100px;
   position: block;
   }
   .img1{
     height: 350px;
     width: 350px;
 border-radius: 50%;
-
+ 
 
   }
   .bg-section {
@@ -37,4 +45,9 @@ border-radius: 50%;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 50px;
   margin-top: 50px;
+}
+  .custom-blur-nav {
+  background: rgba(120, 116, 116, 0.4); /* Change color & transparency */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* For Safari */
 }
