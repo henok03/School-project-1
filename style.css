@@ -1,6 +1,6 @@
 .carousel{
     margin-top: 90px;
-    margin-bottom: 100px;
+    margin-bottom: 0px;
     
 }
 .carousel-caption .welcome-text{
@@ -50,4 +50,16 @@ border-radius: 50%;
   background: rgba(120, 116, 116, 0.4); /* Change color & transparency */
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px); /* For Safari */
+}
+.my-5{
+  margin: 0px;
+padding: 10px;
+}
+.bg-c {
+ background-color:rgba(225, 220, 220, 0.219) ; 
+  padding: 20px;
+  border-radius: 10px;
+}
+.card{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
