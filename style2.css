@@ -1,1 +1,12 @@
-
+.card1:hover{
+       transform: scale(1.09);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+.card2:hover{
+       transform: scale(1.09);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+    .card3:hover{
+       transform: scale(1.09);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
