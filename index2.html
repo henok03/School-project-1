@@ -109,7 +109,7 @@
 <div class="container mt-5">
   <div class="row">
     <div class="col-md-4 mb-4">
-      <div class="card" style="background-color: darkblue;">
+      <div class="card" style="background-color: rgb(14, 98, 126);">
         <img src="about us image/director.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class= "card-title" style="color: antiquewhite;">Teacher1...</h5>
@@ -119,7 +119,7 @@
     </div>
 
     <div class="col-md-4 mb-4">
-      <div class="card"  style="background-color: darkblue;">
+      <div class="card"  style="background-color: rgb(14, 98, 126);">
         <img src="about us image/deputy1.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title" style="color: antiquewhite;">Teacher2...</h5>
@@ -128,8 +128,10 @@
       </div>
     </div>
 
+
+    
     <div class="col-md-4 mb-4">
-      <div class="card" style="background-color: darkblue;">
+      <div class="card" style="background-color: rgb(14, 98, 126);">
         <img src="about us image/deputy2.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title" style="color: antiquewhite;">Teacher3...</h5>
@@ -140,85 +142,92 @@
   </div>
 </div>
 
-<section class="counter-section"">
-  <div class="counter-box">
-    <img src="about us image/counter1.png" alt="Student Icon" class="counter-img">
-    <span class="counter" data-target="5000">0</span>
-    <p>Satisfied Students</p>
+
+
+  <style>
+    .counter {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #007bff;
+    }
+    .counter-box {
+      padding: 30px;
+      background: #f8f9fa;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .counter-box:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+<div class="container text-center py-5">
+    <h2 class="mb-4">Our School Statistics</h2>
+    <div class="row">
+      <div class="col-md-3 col-6 mb-4">
+        <div class="counter-box">
+          <img src="about us image/counter1.png" alt="Student Icon" class="counter-img">
+          <div class="counter" data-target="2000">0</div>
+          <p>Students</p>
+        </div>
+      </div>  
+
+      <div class="col-md-3 col-6 mb-4">
+        <div class="counter-box">
+          <img src="about us image/counter4.png" alt="Student Icon" class="counter-img">
+          <div class="counter" data-target="200">0</div>
+          <p>Teachers</p>
+        </div>
+      </div>
+
+      
+
+      <div class="col-md-3 col-6 mb-4">
+        <div class="counter-box">
+          <img src="about us image/counter3.png" alt="Student Icon" class="counter-img">
+          <div class="counter" data-target="50">0</div>
+          <p>Rewards</p>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-6 mb-4">
+        <div class="counter-box">
+          <img src="about us image/counter2.png" alt="Student Icon" class="counter-img">
+          <div class="counter" data-target="25">0</div>
+          <p>Subjects</p>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div class="counter-box">
-    <img src="about us image/counter4.png" alt="Teacher Icon" class="counter-img">
-    <span class="counter" data-target="200">0</span>
-    <p>Teachers</p>
-  </div>
-</section>
+  <!-- jQuery + Bootstrap 4 JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-<style>
-.counter-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 60px;
-  text-align: center;
-  margin: 100px 0;
-}
+  <!-- Counter Script -->
+  <script>
+    $('.counter').each(function () {
+      var $this = $(this),
+          target = +$this.attr('data-target'),
+          count = 0,
+          speed = 20, // smaller = faster
+          step = target / 100;
 
-.counter-box {
-  background: none;
-}
-
-.counter-img {
-  width: 80px; /* adjust size */
-  height: 80px;
-  margin-bottom: 10px;
-  filter: invert(72%) sepia(86%) saturate(463%) hue-rotate(0deg) brightness(94%) contrast(95%);
-}
-
-.counter {
-  display: block;
-  font-size: 48px;
-  font-weight: bold;
-  color: #222;
-}
-
-.counter-box p {
-  font-size: 18px;
-  color: #666;
-  margin-top: 5px;
-}
-</style>
-
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  const counters = document.querySelectorAll('.counter');
-  const speed = 200; // smaller = faster
-
-  counters.forEach(counter => {
-    const updateCount = () => {
-      const target = +counter.getAttribute('data-target');
-      const count = +counter.innerText;
-      const increment = target / speed;
-
-      if (count < target) {
-        counter.innerText = Math.ceil(count + increment);
-        setTimeout(updateCount, 10);
-      } else {
-        counter.innerText = target;
-      }
-    };
-
-    const observer = new IntersectionObserver(entries => {
-      if (entries[0].isIntersecting) {
-        updateCount();
-        observer.disconnect();
-      }
+      var interval = setInterval(function () {
+        count += step;
+        if (count >= target) {
+          $this.text(target);
+          clearInterval(interval);
+        } else {
+          $this.text(Math.ceil(count));
+        }
+      }, speed);
     });
+  </script>
 
-    observer.observe(counter);
-  });
-});
-</script>
 
 
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
