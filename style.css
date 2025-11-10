@@ -62,4 +62,11 @@ padding: 10px;
 }
 .card{
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.social-media :hover {
+  color: #0066ff; /* Change to your desired hover color */
+  transform: scale(1.1); /* Slightly enlarge the icon */
+  transition: transform 0.3s, color 0.3s; /* Smooth transition */
 }
