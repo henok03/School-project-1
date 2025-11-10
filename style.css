@@ -1,3 +1,33 @@
+.nav-link {
+ position: relative;
+  color: #000000;
+  transition: color 0.3s ease;
+  font-size: 18px;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #007bff; 
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.a{
+  
+  color: #007bff;
+}
+
 .carousel{
     margin-top: 90px;
     margin-bottom: 0px;
