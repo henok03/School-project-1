@@ -25,6 +25,11 @@
   width: 100%;
 }
 
+.a{
+  
+  color: #007bff;
+}
+
 .custom-blur-nav {
   background: rgba(120, 116, 116, 0.4); /* Change color & transparency */
   backdrop-filter: blur(10px);
