@@ -1,3 +1,18 @@
+.nav-link{
+    color: white;
+    font-size: 17px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 10px;
+    color: black;
+}
+.nav-link:hover{
+    color: blue;  
+}
+.custom-blur-nav {
+  background: rgba(120, 116, 116, 0.4); /* Change color & transparency */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* For Safari */
+}
 .counter {
       font-size: 2.5rem;
       font-weight: bold;
@@ -18,3 +33,30 @@
   box-shadow: 0 8px 11px rgba(0,0,0,0.2);
   transition: transform 0.4s;
     }
+    .nav-link {
+ position: relative;
+  color: #000000;
+  transition: color 0.3s ease;
+  font-size: 18px;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #007bff; 
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+.nav-link:hover {
+  color: #007bff; 
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
