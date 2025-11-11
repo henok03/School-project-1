@@ -34,6 +34,7 @@
   background: rgba(120, 116, 116, 0.4); /* Change color & transparency */
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px); /* For Safari */
+
 }
 .counter {
       font-size: 2.5rem;
@@ -61,4 +62,11 @@
   transform: scale(1.1); /* Slightly enlarge the icon */
   transition: transform 0.3s, color 0.3s; /* Smooth transition */
 }
+.carousel{
+    margin-top: 90px;
+    margin-bottom: 0px;
+}
+.card{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
+}
