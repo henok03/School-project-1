@@ -23,6 +23,12 @@
 .nav-link:hover::after {
   width: 100%;
 }
+.custom-blur-nav {
+  background: rgba(120, 116, 116, 0.4); /* Change color & transparency */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* For Safari */
+
+}
 
 .a{
   
@@ -66,3 +72,4 @@
     .contact-text {
       margin-left: 15px;
     }
+    
