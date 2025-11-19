@@ -35,6 +35,7 @@
   color: #007bff;
 }
  body {
+      font-family: 'Out fit';
       background-color: #ffffff;
       font-family: 'Poppins', sans-serif;
     }
@@ -69,7 +70,26 @@
       margin: 0;
       color: #555;
     }
-    .contact-text {
-      margin-left: 15px;
+    .form-control{
+      width: 400px;
+      height: 50px;
+      font-weight: 500;
+      color: #fcd15a;
+      border-radius: 50px;
     }
+    .textarea{
+      height: 140px;
+      border-radius: 20px;
+    }
+    .fullscreen-img {
+    width: 100%;
+    height: 100vh;   
+    object-fit: cover;
+    
+    display:flex;
+    margin: 0;
+    padding: 0;
+}
+
+
     

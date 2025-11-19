@@ -142,13 +142,19 @@
   </div>
 </div>
 
-<div class="ratio ratio-16x9">
-<div class="d-flex justify-content-center mt-5">
-<video src="about us image/video1.mp4" controls poster="about us image/video-bg.jpeg" ></video>
-</div>
-</div>
 
 
+<div class="video-section">
+  <video 
+    id="heroVideo"
+    src="about us image/video1.mp4"
+    poster="about us image/video_bg1.jpg"
+    controls
+    playsinline
+  ></video>
+
+<div id="posterGradient" class="poster-gradient"></div>
+</div>
 
 <div class="container text-center py-5">
     <h2 class="mb-4">Our School Statistics</h2>
@@ -341,7 +347,17 @@
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-  <!-- Counter Script -->
+<script>
+  const video = document.getElementById('heroVideo');
+  const gradient = document.getElementById('posterGradient');
+
+
+  video.addEventListener('play', () => {
+    gradient.classList.add('poster-hidden');
+  });
+</script>
+
+ 
   <script>
     $('.counter').each(function () {
       var $this = $(this),
