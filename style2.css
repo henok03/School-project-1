@@ -31,16 +31,19 @@
 }
 
 .custom-blur-nav {
-  background: rgba(120, 116, 116, 0.4); /* Change color & transparency */
+  background: rgba(120, 116, 116, 0.4); 
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px); /* For Safari */
+  -webkit-backdrop-filter: blur(10px);
 
 }
 
 
 .hero {
     position: relative;
-    background-image: url('about us image/ab2.jpg'); 
+    background-image: linear-gradient( #022435b3),
+                  url('about us image/test.jpeg');
+
+
     background-size: cover;
     background-position: center;
     height: 360px;
@@ -48,7 +51,7 @@
     margin-top: 90px;
     align-items: center;
     justify-content: center;
-    color: #fff;
+    color: #ffffff;
   }
 
   .hero-inner { z-index: 1; }
@@ -70,7 +73,6 @@
     padding: 80px 20px;
   }
 
-  /* optional responsive tweak */
   @media (max-width: 600px) {
     .hero { height: 260px; }
     .torn-divider { height: 60px; }
@@ -98,9 +100,9 @@
     }
 
 .social-media :hover {
-  color: #0066ff; /* Change to your desired hover color */
-  transform: scale(1.1); /* Slightly enlarge the icon */
-  transition: transform 0.3s, color 0.3s; /* Smooth transition */
+  color: #0066ff; 
+  transform: scale(1.1);
+  transition: transform 0.3s, color 0.3s; 
 }
 .carousel{
     margin-top: 90px;
@@ -174,7 +176,7 @@
         align-items: center;
         justify-content: center;
         border-radius: 50%;
-        background: linear-gradient(135deg, #007bff, #02d782);
+        background: linear-gradient(135deg, #022435b3);
         margin: 0 auto 15px auto;
         color: white;
         font-size: 32px;

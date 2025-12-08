@@ -49,7 +49,7 @@
     .icon-box {
       width: 45px;
       height: 45px;
-      background: #f7b500;
+      background:  #00b3ff;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -74,7 +74,7 @@
       width: 400px;
       height: 50px;
       font-weight: 500;
-      color: #fcd15a;
+      color: #007bff;
       border-radius: 50px;
     }
     .textarea{
