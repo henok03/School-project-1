@@ -112,13 +112,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-<<<<<<< HEAD
-    background: linear-gradient(135deg, #022c43); ;
-=======
-    background:   #022c43; ;
->>>>>>> aecc9b3309f22fe594e21961a5507e550c221b42
-radius: 2px;
-}
+  }
 
 
   .bg-section {
