@@ -1,39 +1,89 @@
-.nav-link {
- position: relative;
-  color: #000000;
-  transition: color 0.3s ease;
-  font-size: 18px;
-}
-.nav-link::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0%;
-  height: 2px;
-  background-color: #007bff; 
-  transition: width 0.3s ease;
-  border-radius: 2px;
-}
-
-.nav-link:hover {
-  color: #007bff; 
-}
-
-.nav-link:hover::after {
-  width: 100%;
-}
-.custom-blur-nav {
-  background: rgba(120, 116, 116, 0.4); /* Change color & transparency */
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px); /* For Safari */
-
-}
-
-.a{
-  
-  color: #007bff;
-}
+ .navbar-custom.scrolled {
+            background: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            box-shadow: 0 4px 25px rgba(0, 0, 0, 0.15);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            padding-top: 8px;
+            padding-bottom: 8px;
+        }
+        
+        
+        
+        
+        
+        /* Nav links styling */
+        .navbar-nav .nav-link {
+            color: #f6f7f8 !important;
+            font-weight: 600;
+            padding: 0.5rem 0.75rem;
+            margin: 0 0.25rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .navbar-nav .nav-link:hover {
+            color: #25bdeb !important;
+            background-color: rgba(37, 99, 235, 0.1);
+        }
+        
+        .navbar-nav .nav-link.active {
+            color: #25caeb !important;
+            background-color: rgba(37, 99, 235, 0.15);
+            font-weight: 700;
+        }
+        
+        /* Toggler button styling - Blue color */
+        .navbar-toggler {
+            border: 3px solid #000000 !important;
+            border-radius: 8px;
+             padding: 0.25rem 0.5rem;
+           
+            transition: all 0.3s ease;
+        }
+        
+        .navbar-toggler:hover {
+            background-color: rgba(37, 99, 235, 0.1);
+             background-color: rgba(37, 99, 235, 0.1);
+            transform: rotate(10deg);
+        }
+        
+        /* Custom blue menu icon using CSS */
+        .navbar-toggler-icon {
+            background-image: none !important;
+            position: relative;
+            display: inline-block;
+            width: 24px;
+            height: 18px;
+        }
+        
+        .navbar-toggler-icon::before,
+        .navbar-toggler-icon::after,
+        .navbar-toggler-icon span {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #000000 !important;
+            transition: all 0.3s ease;
+            content: '';
+        }
+        
+        .navbar-toggler-icon::before {
+            top: 0;
+        }
+        
+        .navbar-toggler-icon span {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        .navbar-toggler-icon::after {
+            bottom: 0;
+        }
+        .img{
+        background-color: ( #022435b3)
+        }
  body {
       font-family: 'Out fit';
       background-color: #ffffff;
@@ -91,10 +141,52 @@
     padding: 0;
 }
 .social-media :hover {
-  color: #0066ff;
+   }
+   .navbar-custom {
+            background: #00466c;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(100px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1030;
+        }
+        
+         .footer-bg {
+        background: #022c43;
+        color: #e5f7f8;
+    }
+    .footer-bg a { color: #e5f7f8; text-decoration: none; }
+    .footer-bg a:hover { text-decoration: underline; }
+    .divider-line {
+        width: 1px;
+        background-color: rgba(255,255,255,0.3);
+        height: 100%;
+        margin: auto;
+    }
+    .social-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: rgba(255,255,255,0.15);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+       
+    }
+    .social-icon:hover {
+        background: #25caeb;
+        color: #fff;
+      
   transform: scale(1.1); 
   transition: transform 0.3s, color 0.3s; 
-}
+        text-decoration: none;
+    }
+
 
 
     
