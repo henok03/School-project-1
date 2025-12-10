@@ -107,13 +107,13 @@
     width: 80px;
     height: 80px;
     margin: 0 auto 15px auto;
-    color: #ffffff;
+    color: #f2f3f3;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-{
+  
+
     background: linear-gradient(135deg, #022c43);
     background :   #022c43; ;
     radius: 2px;
@@ -242,6 +242,7 @@ padding: 10px;
   transition: transform 0.3s, color 0.3s; 
         text-decoration: none;
     }
+
     
 
         
