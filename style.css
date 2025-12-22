@@ -153,11 +153,7 @@
     height: 350px;
     width: 300PX ;
     margin: 25px;
-    border-radius: 10px;                                        ;
-}
-
-
-
+    border-radius: 10px;  }                                      
 
   .custom-blur-nav {
   background: rgba(120, 116, 116, 0.4); /* Change color & transparency */
@@ -169,15 +165,21 @@
 padding: 10px;
 }
 .bg-c {
- background-color:rgba(225, 220, 220, 0.219) ; 
-  padding: 20px;
-  border-radius: 10px;
-}
+    background: #7a7a7a;
+    background-size: cover;
+    padding-bottom : 10px;
+    
+    }
 .testimonials{
     margin-bottom: 25px;
     position: relative;
     display: inline-block; /* Keeps underline width same as the text */
 }
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  filter: invert(32%) sepia(94%) saturate(748%) hue-rotate(195deg) brightness(95%) contrast(95%); /* makes icon white */
+}
+
 
 .testimonials::after {
     content: '';
