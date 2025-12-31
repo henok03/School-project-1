@@ -192,8 +192,7 @@
             box-shadow: 0 10px 20px ;
             background-color: #00466c;
         }
-.social-media :hover {
-   }
+
    .navbar-custom {
             background: #00466c;
             backdrop-filter: blur(10px);
@@ -238,7 +237,14 @@
   transition: transform 0.3s, color 0.3s; 
         text-decoration: none;
     }
-
+.founding-box {
+            background: rgba(255,255,255,0.05);
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #25caeb ;
+            margin-top: 20px;
+            margin-left: 10px;
+        }
 
 
     
