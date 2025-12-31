@@ -83,6 +83,39 @@
         .navbar-toggler-icon::after {
             bottom: 0;
         }
+        .nav-link {
+    transition: all 0.3s ease;
+}
+/* 1. SMALL SCREENS (Phones) */
+@media (max-width: 767px) {
+    .navbar-nav .nav-link {
+        font-size: 15px !important;
+        padding: 6px 0; /* Keeps them tight on mobile */
+    }
+}
+
+/* 2. MEDIUM SCREENS (Tablets - Optional Default) */
+@media (min-width: 768px) and (max-width: 1299px) {
+    .navbar-nav .nav-link {
+        font-size: 18px; /* Standard size for tablets */
+    }
+}
+
+/* 3. LARGE SCREENS (Desktops) */
+@media (min-width: 1300px) {
+    .navbar-nav .nav-link {
+        font-size: 1.5rem !important; /* Large text (approx 24px) */
+        font-weight: 700;             /* Makes them very bold */
+        margin-left: 30px;            /* Adds wide spacing between links */
+        transition: 0.3s;
+    }
+    
+    
+    .navbar-nav .nav-link:hover {
+        color: #00abfa !important;    /* Highlight color on hover */
+    }
+}
+   
 .carousel{
     margin-top: 90px;
     margin-bottom: 0px;
@@ -418,5 +451,4 @@
         }
         
     
-
-        
+/* Standard Styles for all screens */
