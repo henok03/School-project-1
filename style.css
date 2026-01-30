@@ -1,38 +1,131 @@
+#navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 13px 0;
+            transition: all 0.4s ease-in-out;
+            background: transparent;
+        }
 
-
-        .navbar-custom.scrolled {
-            background: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
+        #navbar.scrolled {
+            background:#053954  ;
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
-            box-shadow: 0 4px 25px rgba(0, 0, 0, 0.15);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-            padding-top: 8px;
-            padding-bottom: 8px;
+            box-shadow: 0 4px 25px rgba(0, 0, 0, 0.2);
+            padding: 7px 0;
         }
-        
-        
-        
-        
-        
-        /* Nav links styling */
-        .navbar-nav .nav-link {
+
+        /* --- 2. LOGO & SCHOOL NAME --- */
+        .school-name h4 {
+            font-size: 1.1rem;
+            line-height: 1;
+        }
+
+        /* --- 3. NAVIGATION (Desktop & Mobile) --- */
+        .nav-menu ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-menu li a {
+            text-decoration: none;
             color: #f6f7f8 !important;
             font-weight: 600;
-            padding: 0.5rem 0.75rem;
-            margin: 0 0.25rem;
-            border-radius: 8px;
-            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            display: block;
+            transition: 0.3s;
         }
-        
-        .navbar-nav .nav-link:hover {
+.nav-menu li a:hover {
             color: #25bdeb !important;
-            background-color: rgba(37, 99, 235, 0.1);
+            background-color: rgba(2, 9, 25, 0.1);
+            border-radius: 8px;
+        }
+        .nav-menu li a.active {
+            color: #25caeb !important;
+            background-color: rgba(2, 9, 25, 0.15);
+            font-weight: 700;
+            border-radius: 8px;
+        }
+        /* --- 4. MOBILE RESPONSIVENESS (The "Phone" View) --- */
+        @media (max-width: 991px) {
+            /* Adjust School Name for small screens */
+            .school-name h4 { font-size: 0.9rem; }
+            .school-name small { font-size: 0.7rem; }
+            .navbar-brand img { width: 50px; height: auto;}
+             #navbar {        padding: 9px 0;
+            background: #053954 ;
+       
+            
+        }
+        .img-slide{
+            margin-top: 60px;
+      
+        }
+
+            /* Mobile Dropdown Menu */
+            .collapse.show, .collapsing {
+                background: #053954; /* Solid blue on mobile */
+                border-radius: 12px;
+                margin-top: 15px;
+                padding: 15px;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            }
+
+            .nav-menu ul {
+                flex-direction: column; /* Stack links vertically */
+                text-align: center;
+            }
+
+            .nav-menu li {
+                margin: 5px 0;
+                width: 100%;
+            }
+        }
+          
+        
+
+        /* --- 5. DESKTOP VIEW (>992px) --- */
+        @media (min-width: 992px) {
+            .school-name h4 { font-size: 1.4rem; }
+            .nav-menu li { margin-left: 15px; }
+            
+            /* Extra large desktop sizing from your code */
+            @media (min-width: 1300px) {
+                .nav-menu li a {
+                    font-size: 1.3rem !important;
+                    font-weight: 700;
+                    margin-left: 20px;
+                }
+            }
+        }
+
+        /* --- TOGGLER ICON --- */
+        .navbar-toggler-icon::before,
+        .navbar-toggler-icon::after,
+        .navbar-toggler-icon span {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #000000 !important;
+            transition: all 0.3s ease;
+            content: '';
         }
         
-        .navbar-nav .nav-link.active {
-            color: #25caeb !important;
-            background-color: rgba(37, 99, 235, 0.15);
-            font-weight: 700;
+        .navbar-toggler-icon::before {
+            top: 0;
+        }
+        
+        .navbar-toggler-icon span {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        .navbar-toggler-icon::after {
+            bottom: 0;
         }
         
         /* Toggler button styling - Blue color */
@@ -59,65 +152,11 @@
             height: 18px;
         }
         
-        .navbar-toggler-icon::before,
-        .navbar-toggler-icon::after,
-        .navbar-toggler-icon span {
-            position: absolute;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background-color: #000000 !important;
-            transition: all 0.3s ease;
-            content: '';
-        }
         
-        .navbar-toggler-icon::before {
-            top: 0;
-        }
-        
-        .navbar-toggler-icon span {
-            top: 50%;
-            transform: translateY(-50%);
-        }
-        
-        .navbar-toggler-icon::after {
-            bottom: 0;
-        }
-        .nav-link {
-    transition: all 0.3s ease;
-}
-/* 1. SMALL SCREENS (Phones) */
-@media (max-width: 767px) {
-    .navbar-nav .nav-link {
-        font-size: 15px !important;
-        padding: 6px 0; /* Keeps them tight on mobile */
-    }
-}
-
-/* 2. MEDIUM SCREENS (Tablets - Optional Default) */
-@media (min-width: 768px) and (max-width: 1299px) {
-    .navbar-nav .nav-link {
-        font-size: 18px; /* Standard size for tablets */
-    }
-}
-
-/* 3. LARGE SCREENS (Desktops) */
-@media (min-width: 1300px) {
-    .navbar-nav .nav-link {
-        font-size: 1.5rem !important; /* Large text (approx 24px) */
-        font-weight: 700;             /* Makes them very bold */
-        margin-left: 30px;            /* Adds wide spacing between links */
-        transition: 0.3s;
-    }
-    
-    
-    .navbar-nav .nav-link:hover {
-        color: #00abfa !important;    /* Highlight color on hover */
-    }
-}
+     
    
 .carousel{
-    margin-top: 90px;
+    margin-top: 0px;
     margin-bottom: 0px;
     
 }
@@ -149,7 +188,7 @@
 
     background: linear-gradient(135deg, #022c43);
     background :   #022c43; ;
-   border-radius: 2px;
+ 
 }
 .hero-title {
             font-size: 3rem;
@@ -451,5 +490,4 @@
             margin-left: 10px;
         }
         
-    
-/* Standard Styles for all screens */
+ 

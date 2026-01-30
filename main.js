@@ -108,6 +108,19 @@ const track = document.getElementById('track');
 
         // Initialize
         buildPills();
+       
+        // JavaScript to detect scroll and toggle the 'scrolled' class
+       // Trigger the color change after scrolling 60px
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 60) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+      
+    
   
 
 
