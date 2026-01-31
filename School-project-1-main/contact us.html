@@ -10,33 +10,39 @@
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
 <body>
-    
-<header id="navbar" class="navbar navbar-expand-lg">
-    <div class="container">
-        <a class="navbar-brand d-flex align-items-center" href="#">
-            <img src="logo.png" alt="logo" width="80" height="70" class="me-2">
-            <div class="school-name">
-                <h4 class="m-0" style="color: #f0f3f4;">Haile Mariam</h4>
-                <small style="color: #f9fafa;">Mamo School</small>
-            </div>
-        </a>
-
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"><span></span></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <nav class="nav-menu ms-auto">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="index2.html">About</a></li>
-                    <li><a href="">Register</a></li>
-                    <li><a href="contact us.html"   class="active">Contact</a></li>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container">
+          <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="logo.png" alt="school logo" width="80" height="64" class="me-3">
+      <div class="school-name">
+        <h4 class="m-0" style="color: #f0f3f4;">Haile Mariam</h4>
+        <small  style="color: #f9fafa;">Mamo School</small>
+      </div>
+    </a> 
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                    <span></span>
+                </span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index2.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact us.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Register">Register</a>
+                    </li>
                 </ul>
-            </nav>
+            </div>
         </div>
-    </div>
-</header>
+    </nav>
 
 <section class="hero">
   <div class="hero-inner">
@@ -246,16 +252,7 @@
   });
 </script> 
 
-<script>
-      window.addEventListener('scroll', function() {
-            const navbar = document.getElementById('navbar');
-            if (window.scrollY > 60) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-</script>
+
 
 </body>
 </html>
