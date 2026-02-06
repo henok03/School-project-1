@@ -151,7 +151,6 @@
             width: 24px;
             height: 18px;
         }
-    /* --- HERO SECTION --- */
 
 
 .hero {
@@ -355,7 +354,7 @@
         /* The Viewport Container */
         .slider-container {
             position: relative;
-            overflow: hidden; /* This hides the cards outside the 3-card window */
+            overflow: hidden; 
             padding: 20px 0;
         }
 
