@@ -357,6 +357,11 @@
             overflow: hidden; 
             padding: 20px 0;
         }
+        .card-im-top {
+            width: 50%;
+            height: 400px;
+            object-fit: cover;
+        }
 
         /* The Moving Track */
         .testimonial-track {
@@ -605,6 +610,7 @@
         @media (max-width: 640px) {
         .disapear-card { display: none !important; }
         }
+
 
 
 
