@@ -8,8 +8,89 @@
      <link rel="stylesheet" href="style2.css">
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
-    
+    <style>
+                   .faculty-container {
+        padding: 60px 5%;
+        background-color: #fdfdfd;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .faculty-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 40px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .faculty-card {
+        background: #ffffff;
+        border-radius: 24px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+        transition: all 0.4s ease;
+        position: relative;
+        border: 1px solid #f1f5f9;
+    }
+
+    .faculty-card:hover {
+        transform: translateY(-12px);
+        box-shadow: 0 20px 40px rgba(99, 102, 241, 0.12);
+        border-color: #6366f1;
+    }
+
+    .image-holder {
+        width: 100%;
+        height: 350px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .image-holder img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.6s ease;
+    }
+
+    .faculty-card:hover .image-holder img {
+        transform: scale(1.08);
+    }
+
+    .faculty-details {
+        padding: 24px;
+        text-align: center;
+    }
+
+    .faculty-details h3 {
+        margin: 0;
+        font-size: 1.4rem;
+        color: #0f172a;
+        font-weight: 700;
+    }
+
+    .faculty-details p {
+        color: #6366f1;
+        font-weight: 600;
+        font-size: 0.85rem;
+        margin: 8px 0 15px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    /* Status Badge */
+    .dept-badge {
+        display: inline-block;
+        background: #eef2ff;
+        color: #4f46e5;
+        padding: 6px 16px;
+        border-radius: 50px;
+        font-size: 0.75rem;
+        font-weight: 700;
+    }
+    </style>
 </head>
+
 <body>
      
 <nav class="navbar navbar-expand-lg navbar-custom">
@@ -29,7 +110,7 @@
                     <span></span>
                 </span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="collapse navbar-collapse    " id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="index.html">Home</a>
@@ -109,43 +190,42 @@
   <h1 class="text-center" Data-aos="fade-top">Our Experience Advisors</h1>
 <div id="carouselExampleAutoplaying" class="carousel slide bg-section " data-bs-ride="carousel">
  
-<div class="container mt-5">
-  <div class="row">
-    <div class="col-md-4 mb-4">
-      <div class="card card1" style="background-color: rgb(223, 233, 242);" Data-aos="fade-left">
-        <img src="about us image/director.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class= "card-title" style="color: rgb(1, 30, 54);">Teacher1...</h5>
-          <p class="card-text" style="color: rgb(1, 30, 54);">The school director.</p>
+<div class="faculty-container">
+    <div class="faculty-grid">
+        <div class="faculty-card">
+            <div class="image-holder">
+                <img src="uploads/teacher1.jpg" class="card-img-top" alt="Staff Member">
+            </div>
+            <div class="faculty-details">
+                <h3>Sarah Johnson</h3>
+                <p>Mathematics Head</p>
+                <span class="dept-badge">Senior Faculty</span>
+            </div>
         </div>
-      </div>
-    </div>
 
-    <div class="col-md-4 mb-4">
-      <div class="card card1"  style="background-color: rgb(223, 233, 242);" Data-aos="fade-left">
-        <img src="about us image/deputy1.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title" style="color: rgb(1, 30, 54);">Teacher2...</h5>
-          <p class="card-text" style="color: rgb(1, 30, 54);">The school dupty principal.</p>
+        <div class="faculty-card">
+            <div class="image-holder">
+                <img src="uploads/teacher2.jpg" class="card-img-top" alt="Staff Member">
+            </div>
+            <div class="faculty-details">
+                <h3>Michael Chen</h3>
+                <p>Science Department</p>
+                <span class="dept-badge">Researcher</span>
+            </div>
         </div>
-      </div>
-    </div>
 
-
-    <div class="col-md-4 mb-4">
-      <div class="card card1" style="background-color: rgb(223, 233, 242);" Data-aos="fade-left">
-        <img src="about us image/deputy2.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title" style="color: rgb(1, 30, 54);">Teacher3...</h5>
-          <p class="card-text" style="color: rgb(1, 30, 54);">The school dupty principal</p>
+        <div class="faculty-card">
+            <div class="image-holder">
+                <img src="uploads/teacher3.jpg" class="card-img-top" alt="Staff Member">
+            </div>
+            <div class="faculty-details">
+                <h3>Elena Rodriguez</h3>
+                <p>History Specialist</p>
+                <span class="dept-badge">Academic Lead</span>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>
-
-
-
  <div style="position: relative; margin-bottom: 50px; margin-top: 50px;">
  <h1 style="text-align: center;">  <strong>Our Latest Video</strong></h1>
 </div>
@@ -242,7 +322,7 @@
 <div class="col-md-3 col-6 mb-4">
         <div class="counter-box">
           <img src="about us image/counter1.png" alt="Student Icon" class="counter-img">
-          <div class="counter" data-target="1510">0</div>
+          <div class="counter" id="count-students" data-target="0">0</div>
           <p>Students</p>
         </div>
       </div>  
@@ -250,7 +330,7 @@
       <div class="col-md-3 col-6 mb-4">
         <div class="counter-box">
           <img src="about us image/counter4.png" alt="Student Icon" class="counter-img">
-          <div class="counter" data-target="100">0</div>
+         <div class="counter" id="count-teachers" data-target="0">0</div>
           <p>Teachers</p>
         </div>
       </div>
@@ -260,7 +340,7 @@
       <div class="col-md-3 col-6 mb-4">
         <div class="counter-box">
           <img src="about us image/counter3.png" alt="Student Icon" class="counter-img">
-          <div class="counter" data-target="50">0</div>
+         <div class="counter" id="count-rewards" data-target="0">0</div>
           <p>Rewards</p>
         </div>
       </div>
@@ -268,7 +348,7 @@
       <div class="col-md-3 col-6 mb-4">
         <div class="counter-box">
 <img src="about us image/counter2.png" alt="Student Icon" class="counter-img">
-          <div class="counter" data-target="25">0</div>
+         <div class="counter" id="count-subjects" data-target="0">0</div>
           <p>Subjects</p>
         </div>
       </div>
@@ -471,23 +551,40 @@
 
  
   <script>
-    $('.counter').each(function () {
-      var $this = $(this),
-          target = +$this.attr('data-target'),
-          count = 0,
-          speed = 20, // smaller = faster
-          step = target / 100;
+   
+// 1. Fetch the manual numbers from the JSON file
+fetch('stats.json?v=' + new Date().getTime())
+    .then(response => response.json())
+    .then(data => {
+        // 2. Update the data-target attributes
+        document.getElementById('count-students').setAttribute('data-target', data.students);
+        document.getElementById('count-teachers').setAttribute('data-target', data.teachers);
+        document.getElementById('count-rewards').setAttribute('data-target', data.rewards);
+        document.getElementById('count-subjects').setAttribute('data-target', data.subjects);
 
-      var interval = setInterval(function () {
-        count += step;
-        if (count >= target) {
-          $this.text(target);
-          clearInterval(interval);
-        } else {
-          $this.text(Math.ceil(count));
-        }
-      }, speed);
+        // 3. Start the counter animation (your existing script logic)
+        startCounters();
     });
+
+function startCounters() {
+    $('.counter').each(function () {
+        var $this = $(this),
+            target = +$this.attr('data-target'),
+            count = 0,
+            step = target / 100;
+
+        var interval = setInterval(function () {
+            count += step;
+            if (count >= target) {
+                $this.text(target);
+                clearInterval(interval);
+            } else {
+                $this.text(Math.ceil(count));
+            }
+        }, 20);
+    });
+}
+
   </script>
 
 
@@ -547,4 +644,11 @@ const track = document.getElementById('track');
         
         
         </script>
+        <script>
+    // This script automatically refreshes images by adding a timestamp
+    document.querySelectorAll('.card-img-top').forEach(img => {
+        const src = img.src.split('?')[0];
+        img.src = src + '?t=' + new Date().getTime();
+    });
+</script>
     </body>

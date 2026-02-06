@@ -323,6 +323,11 @@
             overflow: hidden; /* This hides the cards outside the 3-card window */
             padding: 20px 0;
         }
+        .card-im-top {
+            width: 50%;
+            height: 400px;
+            object-fit: cover;
+        }
 
         /* The Moving Track */
         .testimonial-track {
@@ -568,6 +573,7 @@
         @media (max-width: 640px) {
             .testimonial-card { flex: 0 0 100%; } /* 1 card */
         }
+
 
 
 
