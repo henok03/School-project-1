@@ -1,3 +1,14 @@
+   window.addEventListener('load', function() {
+        const preloader = document.getElementById('preloader');
+        // Wait 2 seconds so people can actually see your cool animation
+        setTimeout(() => {
+            preloader.style.opacity = '0';
+            setTimeout(() => {
+                preloader.style.display = 'none';
+            }, 500);
+        }, 2000);
+    });
+
 const track = document.getElementById('track');
         const prevBtn = document.getElementById('prevBtn');
         const nextBtn = document.getElementById('nextBtn');

@@ -317,6 +317,7 @@
         transform: scale(1.1);
         filter: brightness(1.2);
     }
+
    .navbar-custom {
             background: #00466c;
             backdrop-filter: blur(10px);
