@@ -1,69 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-     <link rel="stylesheet" href="contact.css">
-      <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />     
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <style>
+        @media (max-width: 576px) {
+            #navbarNav {
+                padding: 3px;
+            }
+
+            .navbar-brand img {
+                width: 70px !important;
+                /* Smaller logo for mobile */
+                height: auto !important;
+            }
+
+            .school-name h4 {
+                padding: 1px;
+                font-size: 21px;
+                /* Smaller font for mobile */
+            }
+
+            .school-name small {
+                font-size: 17px;
+                display: block;
+
+                /* Ensures the subtitle stays underneath */
+            }
+        }
+    </style>
 </head>
+
 <body>
-    
-<header id="navbar" class="navbar navbar-expand-lg">
-    <div class="container">
-        <a class="navbar-brand d-flex align-items-center" href="#">
-            <img src="logo.png" alt="logo" width="80" height="70" class="me-2">
-            <div class="school-name">
-                <h4 class="m-0" style="color: #f0f3f4;">Haile Mariam</h4>
-                <small style="color: #f9fafa;">Mamo School</small>
+
+    <header id="navbar" class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+
+                <img src="logo.png" alt="logo" width="80" height="70" class="me-2">
+
+                <div class="school-name text-white">
+
+                    <h4 class="m-0">Haile Mariam</h4>
+
+                    <small>Mamo School</small>
+
+                </div>
+
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon">
+                    <span></span> </span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <nav class="nav-menu ms-auto">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index2.html">About</a></li>
+                        <li><a href="register.php">Register</a></li>
+                        <li><a href="contact us.html" class="active">Contact</a></li>
+                    </ul>
+                </nav>
             </div>
-        </a>
-
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"><span></span></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <nav class="nav-menu ms-auto">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="index2.html">About</a></li>
-                    <li><a href="">Register</a></li>
-                    <li><a href="contact us.html"   class="active">Contact</a></li>
-                </ul>
-            </nav>
         </div>
-    </div>
-</header>
+    </header>
 
-<section class="hero">
-  <div class="hero-inner">
-    <h1><strong>Contact us</strong></h1>
-  </div>
-
+    <section class="hero">
+        <div class="hero-inner">
+            <h1><strong>Contact us</strong></h1>
+        </div>
 
 
-  <svg class="torn-divider" viewBox="0 0 1200 100" preserveAspectRatio="none" aria-hidden="true">
-    <path d="M0,60 L40,48 L80,70 L120,40 L160,58 L200,35 L240,60 L280,50 L320,72 L360,45 L400,60 L440,38 L480,56 L520,30 L560,62 L600,40 L640,58 L680,33 L720,60 L760,50 L800,70 L840,44 L880,62 L920,38 L960,60 L1000,40 L1040,58 L1080,32 L1120,60 L1160,48 L1200,60 L1200,100 L0,100 Z"
-          fill="#ffffff"></path>
-  </svg>
-</section>
 
-<section class="py-5">
+        <svg class="torn-divider" viewBox="0 0 1200 100" preserveAspectRatio="none" aria-hidden="true">
+            <path
+                d="M0,60 L40,48 L80,70 L120,40 L160,58 L200,35 L240,60 L280,50 L320,72 L360,45 L400,60 L440,38 L480,56 L520,30 L560,62 L600,40 L640,58 L680,33 L720,60 L760,50 L800,70 L840,44 L880,62 L920,38 L960,60 L1000,40 L1040,58 L1080,32 L1120,60 L1160,48 L1200,60 L1200,100 L0,100 Z"
+                fill="#ffffff"></path>
+        </svg>
+    </section>
+
+    <section class="py-5">
         <div class="container">
             <div class="section-title">
                 <h2>Contact Information</h2>
                 <p>Reach out to us through any of the channels below</p>
             </div>
-            
+
             <div class="row g-4">
                 <div class="col-md-4">
                     <div class="card contact-card">
                         <div class="card-body text-center">
                             <div class="card-icon">
-                               <i class="bi bi-geo-alt-fill"></i>
+                                <i class="bi bi-geo-alt-fill"></i>
                             </div>
                             <h3 class="h5 mb-3">Our Address</h3>
                             <p class="text-muted">
@@ -74,29 +111,31 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="col-md-4">
                     <div class="card contact-card">
                         <div class="card-body text-center">
                             <div class="card-icon">
-                             <i class="bi bi-telephone-fill"></i>
+                                <i class="bi bi-telephone-fill"></i>
                             </div>
                             <h3 class="h5 mb-3">Phone & Email</h3>
                             <p class="text-muted">
                                 +1 (555) 123-4567<br>
                                 +1 (555) 987-6543<br>
-                                <a href="mailto:info@contacthub.com" class="text-decoration-none">info@contacthub.com</a><br>
-                                <a href="mailto:support@contacthub.com" class="text-decoration-none">support@contacthub.com</a>
+                                <a href="mailto:info@contacthub.com"
+                                    class="text-decoration-none">info@contacthub.com</a><br>
+                                <a href="mailto:support@contacthub.com"
+                                    class="text-decoration-none">support@contacthub.com</a>
                             </p>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="col-md-4">
                     <div class="card contact-card">
                         <div class="card-body text-center">
                             <div class="card-icon">
-                              <i class="bi bi-clock"></i>
+                                <i class="bi bi-clock"></i>
                             </div>
                             <h3 class="h5 mb-3">Working Hours</h3>
                             <p class="text-muted">
@@ -121,35 +160,42 @@
                             <h2>Send Us a Message</h2>
                             <p>Fill out the form below and we'll get back to you as soon as possible</p>
                         </div>
-                        
+
                         <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
-                            
+
                             <div class="row g-3">
                                 <div class="col-md-6">
-                                      <input type="hidden" name="access_key" value="08af8aff-e453-4965-8bff-597d05ea19dd">
-                                    <label for="name" class="form-label" style="font-weight: bold;" >Full Name</label>
-                                    <input type="text" class="form-control" id="name" placeholder="Enter your full name" name="FULL NAME" required>
+                                    <input type="hidden" name="access_key" value="08af8aff-e453-4965-8bff-597d05ea19dd">
+                                    <label for="name" class="form-label" style="font-weight: bold;">Full Name</label>
+                                    <input type="text" class="form-control" id="name" placeholder="Enter your full name"
+                                        name="FULL NAME" required>
                                 </div>
-                                
+
                                 <div class="col-md-6">
-                                    <label for="email" class="form-label" style="font-weight: bold;">Email Address</label>
-                                    <input type="email" class="form-control" id="email" placeholder="Enter your email address"name="EMAIL ADDRESS" required>
+                                    <label for="email" class="form-label" style="font-weight: bold;">Email
+                                        Address</label>
+                                    <input type="email" class="form-control" id="email"
+                                        placeholder="Enter your email address" name="EMAIL ADDRESS" required>
                                 </div>
-                                
+
                                 <div class="col-12">
-                                    <label for="phone" class="form-label" style="font-weight: bold;">Phone Number</label>
-                                    <input type="number"  class="form-control" id="phone" placeholder="Enter your phone number"name="PHONE NUMBER" required>
+                                    <label for="phone" class="form-label" style="font-weight: bold;">Phone
+                                        Number</label>
+                                    <input type="number" class="form-control" id="phone"
+                                        placeholder="Enter your phone number" name="PHONE NUMBER" required>
                                 </div>
-                                
-                               
-                                
+
+
+
                                 <div class="col-12">
-                                    <label for="message" class="form-label" style="font-weight: bold;" >Message</label>
-                                    <textarea class="form-control" id="message" rows="5" placeholder="Type your message here..."name="MESSAGE" required></textarea>
+                                    <label for="message" class="form-label" style="font-weight: bold;">Message</label>
+                                    <textarea class="form-control" id="message" rows="5"
+                                        placeholder="Type your message here..." name="MESSAGE" required></textarea>
                                 </div>
-                                
+
                                 <div class="col-12">
-                                    <button type="submit" class="btn btn-primary w-100"style="font-weight: bold;">Send Message</button>
+                                    <button type="submit" class="btn btn-primary w-100" style="font-weight: bold;">Send
+                                        Message</button>
                                 </div>
                             </div>
                         </form>
@@ -160,94 +206,99 @@
     </section>
 
 
-</div>
-<div class="container-fluid">
-<div class="row">
-<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1340.083104183222!2d39.52470499132378!3d9.67213430483581!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1649bd74d865c871%3A0xf9bd9377400ba90!2sHaile%20Mariam%20Mamo%20Secondary%20School!5e1!3m2!1sam!2set!4v1766911638866!5m2!1sam!2set"width="1200px" height="450px" style="border:0;" class="justify-content-center mt-5 mb-3"   referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-</div>
-</div>
-
-<!-- FOOTER -->
-<footer class="footer-bg pt-5 pb-4">
-    <div class="container">
-
-        <div class="row g-4">
-
-            <!-- School -->
-            <div class="col-12 col-md-4">
-                <h5 class="fw-bold mb-3 text-center text-small-start">HMM Secondary School</h5>
-
-                <h6 class="fw-bold"></h6>
-                <p class="mb-1 text-center text-small-start">Phone: (123) 456-7890</p>
-                <p class="mb-3 text-center text-small-start">Email: example@gmail.com</p>
-
-              <div class="founding-box">
-                    <strong>Founding Date</strong><br>
-                    <span style="color: white;">Since 1935 E.C</span>
-                </div>
-            </div>
-
-            <!-- Divider -->
-            <div class="col-md-1 d-none d-md-flex">
-                <div class="divider-line"></div>
-            </div>
-
-            <!-- Menu -->
-            <div class="col-6 col-md-3">
-                <h5 class="fw-bold mb-3" style="margin-left: 30px;">Menu</h5>
-                <p><a href="index.html"  style="margin-left: 30px;">Home</a></p>
-                <p><a href="index2.html" style="margin-left: 30px;">About us</a></p>
-                <p><a href="contact us.html" style="margin-left: 30px;">Contact us</a></p>
-                <p><a href="#" style="margin-left: 30px;">Register</a></p>
-            </div>
-
-            <!-- Address -->
-            <div class="col-6 col-md-3">
-                <h5 class="fw-bold mb-3">Address</h5>
-                <p>Ethiopia</p>
-                <p>North Shewa</p>
-                <p>Debre birhan</p>
-                <p>HMM</p>
-            </div>
-
-            <!-- Follow Us -->
-            <div class="col-12 mt-4 align-items-center d-flex flex-column">
-                <h5 class="fw-bold mb-3 ">Follow us</h5>
-                <div class=" gap-3 d-flex justify-content-center ">
-                    <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
-                    <a href="#" class="social-icon"><i class="bi bi-twitter"></i></a>
-                    <a href="#" class="social-icon"><i class="bi bi-telegram"></i></a>
-                    <a href="#" class="social-icon"><i class="bi bi-linkedin"></i></a>
-                </div>
-            </div>
-
-        </div>
-
-        <hr class="border-light opacity-50 mt-4">
-
-        <!-- Copyright -->
-        <div class="text-center small">
-            © 2025 Haile Mariam Mamo Secondary School. All rights reserved.<br>
-            Dev Henok Hailegnaw & Aman Aschalew
-        </div>
-
     </div>
-</footer>
+    <div class="container-fluid">
+        <div class="row">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1340.083104183222!2d39.52470499132378!3d9.67213430483581!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1649bd74d865c871%3A0xf9bd9377400ba90!2sHaile%20Mariam%20Mamo%20Secondary%20School!5e1!3m2!1sam!2set!4v1766911638866!5m2!1sam!2set"
+                width="1200px" height="450px" style="border:0;" class="justify-content-center mt-5 mb-3"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer-bg pt-5 pb-4">
+        <div class="container">
+
+            <div class="row g-4">
+
+                <!-- School -->
+                <div class="col-12 col-md-4">
+                    <h5 class="fw-bold mb-3 text-center text-small-start">HMM Secondary School</h5>
+
+                    <h6 class="fw-bold"></h6>
+                    <p class="mb-1 text-center text-small-start">Phone: (123) 456-7890</p>
+                    <p class="mb-3 text-center text-small-start">Email: example@gmail.com</p>
+
+                    <div class="founding-box">
+                        <strong>Founding Date</strong><br>
+                        <span style="color: white;">Since 1935 E.C</span>
+                    </div>
+                </div>
+
+                <!-- Divider -->
+                <div class="col-md-1 d-none d-md-flex">
+                    <div class="divider-line"></div>
+                </div>
+
+                <!-- Menu -->
+                <div class="col-6 col-md-3">
+                    <h5 class="fw-bold mb-3" style="margin-left: 30px;">Menu</h5>
+                    <p><a href="index.html" style="margin-left: 30px;">Home</a></p>
+                    <p><a href="index2.html" style="margin-left: 30px;">About us</a></p>
+                    <p><a href="contact us.html" style="margin-left: 30px;">Contact us</a></p>
+                    <p><a href="register.php" style="margin-left: 30px;">Register</a></p>
+                </div>
+
+                <!-- Address -->
+                <div class="col-6 col-md-3">
+                    <h5 class="fw-bold mb-3">Address</h5>
+                    <p>Ethiopia</p>
+                    <p>North Shewa</p>
+                    <p>Debre birhan</p>
+                    <p>HMM</p>
+                </div>
+
+                <!-- Follow Us -->
+                <div class="col-12 mt-4 align-items-center d-flex flex-column">
+                    <h5 class="fw-bold mb-3 ">Follow us</h5>
+                    <div class=" gap-3 d-flex justify-content-center ">
+                        <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-icon"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="bi bi-telegram"></i></a>
+                        <a href="#" class="social-icon"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <hr class="border-light opacity-50 mt-4">
+
+            <!-- Copyright -->
+            <div class="text-center small">
+                © 2025 Haile Mariam Mamo Secondary School. All rights reserved.<br>
+                Dev Henok Hailegnaw & Aman Aschalew
+            </div>
+
+        </div>
+    </footer>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script>
-  AOS.init({
-    duration: 1000,
-    once: true,
-    offset: 100,
-  });
-</script> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100,
+        });
+    </script>
 
-<script>
-      window.addEventListener('scroll', function() {
+    <script>
+        window.addEventListener('scroll', function () {
             const navbar = document.getElementById('navbar');
             if (window.scrollY > 60) {
                 navbar.classList.add('scrolled');
@@ -255,7 +306,8 @@
                 navbar.classList.remove('scrolled');
             }
         });
-</script>
+    </script>
 
 </body>
+
 </html>

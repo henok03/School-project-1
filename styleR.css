@@ -1,163 +1,266 @@
-        /* --- 1. CORE STYLES & VARIABLES --- */
-        :root {
-            --primary: #1a5f7a;
-            --secondary: #159895;
-            --success: #10b981;
-            --light-bg: #f0f4f8;
-            --border-color: #d1d9e6;
-            --navbar-bg: #053954;
-        }
+:root {
+    --primary: #1a5f7a;
+    --secondary: #159895;
+    --success: #10b981;
+    --light-bg: #f0f4f8;
+    --border-color: #d1d9e6;
+    --navbar-bg: #053954;
+}
 
-        body {
-            background-color: #f4f7f9;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            padding-top: 110px; /* FIX: Prevents form from being hidden under navbar */
-        }
+body {
+    background-color: #f4f7f9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 110px;
+    /* FIX: Prevents form from being hidden under navbar */
+}
 
-        /* --- 2. NAVBAR & MOBILE FIXES --- */
-        #navbar {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            padding: 13px 0;
-            transition: all 0.4s ease-in-out;
-            background: var(--navbar-bg); /* Solid background for registration page */
-        }
 
-        #navbar.scrolled {
-            padding: 7px 0;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-        }
+/* --- 2. NAVBAR & MOBILE FIXES --- */
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 10px 0;
+    transition: all 0.4s ease-in-out;
+    background: var(--navbar-bg);
+}
 
-        .nav-menu ul {
-            display: flex;
-            list-style: none;
-            margin: 0; padding: 0;
-        }
+.nav-menu ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
 
-        .nav-menu li a {
-            text-decoration: none;
-            color: #f6f7f8 !important;
-            font-weight: 600;
-            padding: 0.5rem 1rem;
-            display: block;
-            transition: 0.3s;
-        }
+/* --- FIXED NAVBAR TOGGLER --- */
+/* --- FIXED BLACK NAVBAR TOGGLER --- */
+.navbar-toggler {
+    /* The outer border */
+    border: 3px solid #000000 !important;
+    border-radius: 8px;
+    padding: 0.4rem;
+    background: transparent;
+    transition: all 0.3s ease;
+}
 
-        .nav-menu li a.active {
-            color: #25caeb !important;
-            font-weight: 700;
-        }
+.navbar-toggler-icon {
+    /* Change #000 to transparent to remove the solid black block */
+    background: transparent !important;
+    position: relative;
+    display: inline-block;
+    width: 24px;
+    height: 18px;
+    vertical-align: middle;
+}
 
-        /* FIX: Mobile Toggler Visibility */
-        .navbar-toggler {
-            border: 2px solid white !important;
-        }
-        .navbar-toggler-icon {
-            filter: invert(1); /* Makes the default icon white */
-        }
+.navbar-toggler:hover {
+    background-color: rgba(37, 99, 235, 0.1);
+    background-color: rgba(37, 99, 235, 0.1);
+    transform: rotate(10deg);
+}
 
-        @media (max-width: 991px) {
-            .navbar-collapse {
-                background: var(--navbar-bg);
-                margin-top: 10px;
-                padding: 20px;
-                border-radius: 10px;
-            }
-            .nav-menu ul { flex-direction: column; text-align: center; }
-        }
+/* This styles the actual white lines inside the button */
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after,
+.navbar-toggler-icon span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff !important;
+    /* Keep this white for the blue navbar */
+    transition: all 0.3s ease;
+    content: '';
+}
 
-        /* --- 3. FORM STYLING --- */
-        .form-card {
-            background: #ffffff;
-            max-width: 850px;
-            margin: 0 auto 50px auto;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-            overflow: hidden;
-        }
+/* Line spacing */
+.navbar-toggler-icon::before {
+    top: 0;
+}
 
-        .form-header {
-            background: var(--primary);
-            color: white;
-            padding: 30px;
-            text-align: center;
-        }
+.navbar-toggler-icon span {
+    top: 8px;
+}
 
-        .form-body { padding: 40px; }
+.navbar-toggler-icon::after {
+    bottom: 0;
+}
 
-        .section-title {
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: var(--primary);
-            border-bottom: 2px solid var(--light-bg);
-            padding-bottom: 10px;
-            margin: 30px 0 20px 0;
-            display: flex;
-            align-items: center;
-        }
+/* Mobile Menu Background */
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background: var(--navbar-bg);
+        margin-top: 15px;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
 
-        .section-title span {
-            background: var(--primary);
-            color: white;
-            width: 28px;
-            height: 28px;
-            border-radius: 50%;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 12px;
-            font-size: 0.9rem;
-        }
+    .nav-menu ul {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+}
 
-        .grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
+/* --- 3. FORM STYLING --- */
+.form-card {
+    background: #ffffff;
+    max-width: 850px;
+    margin: 0 auto 50px auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
 
-        .input-group { margin-bottom: 15px; flex-direction: column; display: flex; }
-        .full { grid-column: span 2; }
+.form-header {
+    background: var(--primary);
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
 
-        label { font-weight: 600; margin-bottom: 8px; font-size: 0.9rem; }
+.form-body {
+    padding: 40px;
+}
 
-        input, select {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid var(--border-color);
-            border-radius: 6px;
-            transition: 0.3s;
-        }
+.section-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary);
+    border-bottom: 2px solid var(--light-bg);
+    padding-bottom: 10px;
+    margin: 30px 0 20px 0;
+    display: flex;
+    align-items: center;
+}
 
-        .upload-area {
-            border: 2px dashed #94a3b8;
-            border-radius: 12px;
-            padding: 30px;
-            text-align: center;
-            background: #f8fafc;
-            position: relative;
-            cursor: pointer;
-        }
+.section-title span {
+    background: var(--primary);
+    color: white;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+    font-size: 0.9rem;
+}
 
-        #preview-img {
-            max-width: 150px;
-            margin-top: 15px;
-            display: none;
-            border-radius: 8px;
-        }
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
 
-        .submit-btn {
-            width: 100%;
-            background: var(--primary);
-            color: white;
-            padding: 18px;
-            border: none;
-            border-radius: 8px;
-            font-weight: bold;
-            margin-top: 30px;
-            transition: 0.3s;
-        }
+.input-group {
+    margin-bottom: 15px;
+    flex-direction: column;
+    display: flex;
+}
 
-        .submit-btn:hover { background: var(--secondary); }
-  
+.full {
+    grid-column: span 2;
+}
+
+label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.upload-area {
+    border: 2px dashed #94a3b8;
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    background: #f8fafc;
+    position: relative;
+    cursor: pointer;
+}
+
+#preview-img {
+    max-width: 150px;
+    margin-top: 15px;
+    display: none;
+    border-radius: 8px;
+}
+
+.submit-btn {
+    width: 100%;
+    background: var(--primary);
+    color: white;
+    padding: 18px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-top: 30px;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background: var(--secondary);
+}
+
+/* --- 📱 MOBILE OPTIMIZATION (Phone & Tablet) --- */
+@media (max-width: 768px) {
+
+    /* 1. Remove side margins so the card fits the screen width */
+    .form-card {
+        margin: 10px;
+        border-radius: 8px;
+        /* Slightly sharper corners look better on small screens */
+    }
+
+    /* 2. Reduce padding so we don't waste precious screen space */
+    .form-header {
+        padding: 20px 15px;
+    }
+
+    .form-body {
+        padding: 20px;
+    }
+
+    /* 3. FORCE GRID TO SINGLE COLUMN */
+    /* This stops "First Name" and "Last Name" from being side-by-side */
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .full {
+        grid-column: span 1;
+    }
+
+    /* 4. Larger Inputs for easier tapping */
+    input,
+    select {
+        padding: 14px;
+        /* Bigger tap area for thumbs */
+        font-size: 16px;
+        /* Prevents iOS from auto-zooming on focus */
+    }
+
+    /* 5. Adjust Section Titles */
+    .section-title {
+        font-size: 1.1rem;
+        margin: 20px 0 15px 0;
+    }
+
+    /* 6. Make the Submit Button "Sticky" or more prominent */
+    .submit-btn {
+        padding: 20px;
+        font-size: 1.1rem;
+    }
+}

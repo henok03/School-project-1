@@ -1,126 +1,135 @@
 const track = document.getElementById('track');
-        const prevBtn = document.getElementById('prevBtn');
-        const nextBtn = document.getElementById('nextBtn');
-        const cards = document.querySelectorAll('.testimonial-card');
-        
-        let currentIndex = 0;
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+const cards = document.querySelectorAll('.testimonial-card');
 
-        function updateSlider() {
-            // Check how many cards are currently visible based on screen size
-            let visibleCards = 3;
-            if (window.innerWidth <= 1024) visibleCards = 2;
-            if (window.innerWidth <= 640) visibleCards = 1;
+let currentIndex = 0;
 
-            const maxIndex = cards.length - visibleCards;
+function updateSlider() {
+    // Check how many cards are currently visible based on screen size
+    let visibleCards = 3;
+    if (window.innerWidth <= 1024) visibleCards = 2;
+    if (window.innerWidth <= 640) visibleCards = 1;
 
-            // Constrain index
-            if (currentIndex > maxIndex) currentIndex = 0;
-            if (currentIndex < 0) currentIndex = maxIndex;
+    const maxIndex = cards.length - visibleCards;
 
-            // Calculate movement
-            const gap = 24;
-            const cardWidth = cards[0].offsetWidth;
-            const moveAmount = currentIndex * (cardWidth + gap);
+    // Constrain index
+    if (currentIndex > maxIndex) currentIndex = 0;
+    if (currentIndex < 0) currentIndex = maxIndex;
 
-            track.style.transform = `translateX(-${moveAmount}px)`;
-        }
+    // Calculate movement
+    const gap = 24;
+    const cardWidth = cards[0].offsetWidth;
+    const moveAmount = currentIndex * (cardWidth + gap);
 
-        nextBtn.addEventListener('click', () => {
-            currentIndex++;
-            updateSlider();
-        });
+    track.style.transform = `translateX(-${moveAmount}px)`;
+}
 
-        prevBtn.addEventListener('click', () => {
-            currentIndex--;
-            updateSlider();
-        });
+nextBtn.addEventListener('click', () => {
+    currentIndex++;
+    updateSlider();
+});
 
-        // Recalculate on resize to fix positioning
-        window.addEventListener('resize', () => {
-            currentIndex = 0; // Reset to avoid layout bugs
-            updateSlider();
-        });
-        
-        // Final call to ensure correct init
-        updateSlider();
-        
+prevBtn.addEventListener('click', () => {
+    currentIndex--;
+    updateSlider();
+});
 
-    
-        const rail = document.querySelector('#mainRail');
-        const pillBox = document.querySelector('#pillBox');
-        const items = document.querySelectorAll('.gallery-item');
-        const btnLeft = document.querySelector('#leftArrow');
-        const btnRight = document.querySelector('#rightArrow');
+// Recalculate on resize to fix positioning
+window.addEventListener('resize', () => {
+    currentIndex = 0; // Reset to avoid layout bugs
+    updateSlider();
+});
 
-        let position = 0;
+// Final call to ensure correct init
+updateSlider();
 
-        function checkCapacity() {
-            if (window.innerWidth <= 640) return 1;
-            if (window.innerWidth <= 1024) return 2;
-            return 3;
-        }
 
-        function buildPills() {
-            pillBox.innerHTML = '';
-            const totalSteps = items.length - (checkCapacity() - 1);
-            for (let i = 0; i < totalSteps; i++) {
-                const pill = document.createElement('button');
-                pill.className = 'step-pill' + (i === 0 ? ' is-active' : '');
-                pill.addEventListener('click', () => jumpTo(i));
-                pillBox.appendChild(pill);
-            }
-        }
 
-        function refreshUI() {
-            const pills = document.querySelectorAll('.step-pill');
-            pills.forEach((p, idx) => {
-                p.classList.toggle('is-active', idx === position);
-            });
+const rail = document.querySelector('#mainRail');
+const pillBox = document.querySelector('#pillBox');
+const items = document.querySelectorAll('.gallery-item');
+const btnLeft = document.querySelector('#leftArrow');
+const btnRight = document.querySelector('#rightArrow');
 
-            const space = 30; // Gap size
-            const itemWidth = items[0].offsetWidth;
-            const scrollDist = position * (itemWidth + space);
-            rail.style.transform = `translateX(-${scrollDist}px)`;
-        }
+let position = 0;
 
-        function jumpTo(target) {
-            position = target;
-            refreshUI();
-        }
+function checkCapacity() {
+    if (window.innerWidth <= 640) return 1;
+    if (window.innerWidth <= 1024) return 2;
+    return 3;
+}
 
-        btnRight.addEventListener('click', () => {
-            const limit = items.length - checkCapacity();
-            position = (position < limit) ? position + 1 : 0;
-            refreshUI();
-        });
+function buildPills() {
+    pillBox.innerHTML = '';
+    const totalSteps = items.length - (checkCapacity() - 1);
+    for (let i = 0; i < totalSteps; i++) {
+        const pill = document.createElement('button');
+        pill.className = 'step-pill' + (i === 0 ? ' is-active' : '');
+        pill.addEventListener('click', () => jumpTo(i));
+        pillBox.appendChild(pill);
+    }
+}
 
-        btnLeft.addEventListener('click', () => {
-            const limit = items.length - checkCapacity();
-            position = (position > 0) ? position - 1 : limit;
-            refreshUI();
-        });
+function refreshUI() {
+    const pills = document.querySelectorAll('.step-pill');
+    pills.forEach((p, idx) => {
+        p.classList.toggle('is-active', idx === position);
+    });
 
-        window.addEventListener('resize', () => {
-            position = 0;
-            buildPills();
-            refreshUI();
-        });
+    const space = 30; // Gap size
+    const itemWidth = items[0].offsetWidth;
+    const scrollDist = position * (itemWidth + space);
+    rail.style.transform = `translateX(-${scrollDist}px)`;
+}
 
-        // Initialize
-        buildPills();
-       
-        // JavaScript to detect scroll and toggle the 'scrolled' class
-       // Trigger the color change after scrolling 60px
-        window.addEventListener('scroll', function() {
-            const navbar = document.getElementById('navbar');
-            if (window.scrollY > 60) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-      
-    
-  
+function jumpTo(target) {
+    position = target;
+    refreshUI();
+}
+
+btnRight.addEventListener('click', () => {
+    const limit = items.length - checkCapacity();
+    position = (position < limit) ? position + 1 : 0;
+    refreshUI();
+});
+
+btnLeft.addEventListener('click', () => {
+    const limit = items.length - checkCapacity();
+    position = (position > 0) ? position - 1 : limit;
+    refreshUI();
+});
+
+window.addEventListener('resize', () => {
+    position = 0;
+    buildPills();
+    refreshUI();
+});
+
+// Initialize
+buildPills();
+
+// JavaScript to detect scroll and toggle the 'scrolled' class
+// Trigger the color change after scrolling 60px
+window.addEventListener('scroll', function () {
+    const navbar = document.getElementById('navbar');
+    if (window.scrollY > 60) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+});
+
+
+const burger = document.getElementById('burger');
+const navLinks = document.getElementById('navLinks');
+
+burger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    const lines = burger.querySelectorAll('div');
+    lines[0].style.transform = navLinks.classList.contains('active') ? 'rotate(45deg) translate(5px, 6px)' : 'none';
+    lines[1].style.opacity = navLinks.classList.contains('active') ? '0' : '1';
+    lines[2].style.transform = navLinks.classList.contains('active') ? 'rotate(-45deg) translate(5px, -6px)' : 'none';
+});
 
 
