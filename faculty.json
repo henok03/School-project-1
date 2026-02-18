@@ -1,0 +1,17 @@
+{
+    "teacher1": {
+        "name": "Mary Johnson",
+        "title": "Mathematics Head",
+        "role": "Senior Faculty"
+    },
+    "teacher2": {
+        "name": "Michael Chen",
+        "title": "Science Department",
+        "role": "Researcher"
+    },
+    "teacher3": {
+        "name": "Elena Rodriguez",
+        "title": "History Specialist",
+        "role": "Academic Lead"
+    }
+}
