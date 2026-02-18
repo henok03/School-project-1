@@ -336,6 +336,32 @@
     transition: 0.3s ease-in-out;
 }
 
+<<<<<<< HEAD
+    .card-custom:hover .icon-box {
+        transform: scale(1.1);
+        filter: brightness(1.2);
+    }
+
+   .navbar-custom {
+            background: #00466c;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(100px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1030;
+        }
+        :root {
+            --accent-glow: #e5eded;
+            
+            --item-spacing: 30px;
+            --slide-speed: 0.7s;
+            
+        }
+=======
 .card-custom {
     transition: 0.3s ease-in-out;
     border: 0;
@@ -374,6 +400,7 @@
     --slide-speed: 0.7s;
 
 }
+>>>>>>> 2b93537d67c8ecd25834457c08a26192072e5376
 
 .testimonial-section {
     max-width: 1200px;

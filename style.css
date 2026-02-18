@@ -1,8 +1,236 @@
+<<<<<<< HEAD
+/* Preloader Background */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #053954; /* Dark professional background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Keeps it on top of everything */
+    transition: opacity 0.5s ease;
+}
+
+.loader-content {
+    text-align: center;
+}
+
+.logo-text {
+    color: #f1f0ec; /* Gold */
+    font-size: 4rem;
+    font-weight: bold;
+    margin: 0;
+    letter-spacing: 5px;
+    animation: pulse 1.5s infinite ease-in-out;
+}
+
+/* The Animated Bar */
+.loading-bar {
+    width: 0;
+    height: 4px;
+    background: #f3f2ef;
+    margin: 15px auto;
+    animation: fillBar 2s forwards;
+}
+
+.loader-content p {
+    color: white;
+    font-family: sans-serif;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+/* Animations */
+@keyframes pulse {
+    0% { transform: scale(0.95); opacity: 0.7; }
+    50% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(0.95); opacity: 0.7; }
+}
+
+@keyframes fillBar {
+    0% { width: 0; }
+    100% { width: 150px; }
+}
+
+#navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 13px 0;
+            transition: all 0.4s ease-in-out;
+            background: transparent;
+        }
+
+        #navbar.scrolled {
+            background:#053954  ;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            box-shadow: 0 4px 25px rgba(0, 0, 0, 0.2);
+            padding: 7px 0;
+        }
+
+        /* --- 2. LOGO & SCHOOL NAME --- */
+        .school-name h4 {
+            font-size: 1.1rem;
+            line-height: 1;
+        }
+
+        /* --- 3. NAVIGATION (Desktop & Mobile) --- */
+        .nav-menu ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-menu li a {
+            text-decoration: none;
+            color: #f6f7f8 !important;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            display: block;
+            transition: 0.3s;
+        }
+.nav-menu li a:hover {
+            color: #25bdeb !important;
+            background-color: rgba(2, 9, 25, 0.1);
+            border-radius: 8px;
+        }
+        .nav-menu li a.active {
+            color: #25caeb !important;
+            background-color: rgba(2, 9, 25, 0.15);
+            font-weight: 700;
+            border-radius: 8px;
+        }
+        /* --- 4. MOBILE RESPONSIVENESS (The "Phone" View) --- */
+        @media (max-width: 991px) {
+            /* Adjust School Name for small screens */
+            .school-name h4 { font-size: 0.9rem; }
+            .school-name small { font-size: 0.7rem; }
+            .navbar-brand img { width: 50px; height: auto;}
+             #navbar {        padding: 9px 0;
+            background: #053954 ;
+       
+            
+        }
+        .img-slide{
+            margin-top: 60px;
+      
+        }
+
+            /* Mobile Dropdown Menu */
+            .collapse.show, .collapsing {
+                background: #053954; /* Solid blue on mobile */
+                border-radius: 12px;
+                margin-top: 15px;
+                padding: 15px;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            }
+
+            .nav-menu ul {
+                flex-direction: column; /* Stack links vertically */
+                text-align: center;
+            }
+
+            .nav-menu li {
+                margin: 5px 0;
+                width: 100%;
+            }
+        }
+          
+        
+
+        /* --- 5. DESKTOP VIEW (>992px) --- */
+        @media (min-width: 992px) {
+            .school-name h4 { font-size: 1.4rem; }
+            .nav-menu li { margin-left: 15px; }
+            
+            /* Extra large desktop sizing from your code */
+            @media (min-width: 1300px) {
+                .nav-menu li a {
+                    font-size: 1.3rem !important;
+                    font-weight: 700;
+                    margin-left: 20px;
+                }
+            }
+        }
+
+        /* --- TOGGLER ICON --- */
+        .navbar-toggler-icon::before,
+        .navbar-toggler-icon::after,
+        .navbar-toggler-icon span {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #000000 !important;
+            transition: all 0.3s ease;
+            content: '';
+        }
+        
+        .navbar-toggler-icon::before {
+            top: 0;
+        }
+        
+        .navbar-toggler-icon span {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        .navbar-toggler-icon::after {
+            bottom: 0;
+        }
+        
+        /* Toggler button styling - Blue color */
+        .navbar-toggler {
+            border: 3px solid #000000 !important;
+            border-radius: 8px;
+             padding: 0.25rem 0.5rem;
+           
+            transition: all 0.3s ease;
+        }
+        
+        .navbar-toggler:hover {
+            background-color: rgba(37, 99, 235, 0.1);
+             background-color: rgba(37, 99, 235, 0.1);
+            transform: rotate(10deg);
+        }
+        
+        /* Custom blue menu icon using CSS */
+        .navbar-toggler-icon {
+            background-image: none !important;
+            position: relative;
+            display: inline-block;
+            width: 24px;
+            height: 18px;
+        }
+        
+        
+     
+   
+.carousel{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    
+}
+.carousel-caption .welcome-text{
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 30px;
+  margin-bottom: 110px;
+  position: block;
+=======
   :root {
       --brand-blue: rgba(3, 48, 89, 0.98);
       --accent-gold: #f4b41a;
       --white: #ffffff;
       --text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+>>>>>>> 2b93537d67c8ecd25834457c08a26192072e5376
   }
 
   * {
