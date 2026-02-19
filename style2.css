@@ -1,200 +1,156 @@
-#navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    padding: 13px 0;
-    transition: all 0.4s ease-in-out;
-    background: transparent;
+/* --- GLOBAL VARIABLES & BASE STYLES --- */
+
+:root {
+    --brand-blue: rgba(3, 48, 89, 0.98);
+    --accent-gold: #f4b41a;
+    --white: #ffffff;
+    --text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+
 }
 
-#navbar.scrolled {
-    background: #053954;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.2);
-    padding: 7px 0;
-}
-
-/* --- 2. LOGO & SCHOOL NAME --- */
-.school-name h4 {
-    font-size: 1.1rem;
-    line-height: 1;
-}
-
-/* --- 3. NAVIGATION (Desktop & Mobile) --- */
-.nav-menu ul {
-    display: flex;
-    list-style: none;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
 }
 
-.nav-menu li a {
+body {
+    background: #f4f7f9;
+    overflow-x: hidden;
+}
+
+header {
+    width: 100%;
+    padding: 12px 5%;
+    padding-bottom: 0px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 2000;
+    background: #053954;
+    backdrop-filter: blur(12px);
+    border-bottom: 2px solid var(--accent-gold);
+}
+
+.logo {
+
+    display: flex;
+    align-items: center;
+    color: white;
     text-decoration: none;
-    color: #f6f7f8 !important;
-    font-weight: 600;
-    padding: 0.5rem 1rem;
-    display: block;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logo img {
+    height: 70px;
+    margin-right: 12px;
+}
+
+.logo-text h1 {
+    font-size: 1.0rem;
+    text-transform: uppercase;
+    font-weight: 750;
+    line-height: 1.1;
+    /* Tight but prevents overlapping */
+    margin: 0;
+    /* CRITICAL: removes the 'up and down' shift */
+}
+
+.logo-text p {
+    font-size: 0.65rem;
+    opacity: 0.8;
+    margin: 0;
+
+    line-height: 1.1;
+    margin-bottom: 10px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    align-items: center;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
     transition: 0.3s;
 }
 
-.nav-menu li a:hover {
-    color: #25bdeb !important;
-    background-color: rgba(2, 9, 25, 0.1);
-    border-radius: 8px;
+.nav-links a:hover {
+    color: var(--accent-gold);
 }
 
-.nav-menu li a.active {
-    color: #25caeb !important;
-    background-color: rgba(2, 9, 25, 0.15);
+.btn-cta {
+    background: var(--accent-gold);
+    color: #000 !important;
+    padding: 8px 20px;
+    border-radius: 50px;
     font-weight: 700;
-    border-radius: 8px;
-}
-
-/* --- 4. MOBILE RESPONSIVENESS (The "Phone" View) --- */
-@media (max-width: 991px) {
-
-    /* Adjust School Name for small screens */
-    .school-name h4 {
-        font-size: 0.9rem;
-    }
-
-    .school-name small {
-        font-size: 0.7rem;
-    }
-
-    .navbar-brand img {
-        width: 50px;
-        height: auto;
-    }
-
-    #navbar {
-        padding: 9px 0;
-        background: #053954;
-
-
-    }
-
-    .img-slide {
-        margin-top: 60px;
-
-    }
-
-    /* Mobile Dropdown Menu */
-    .collapse.show,
-    .collapsing {
-        background: #053954;
-        /* Solid blue on mobile */
-        border-radius: 12px;
-        margin-top: 15px;
-        padding: 15px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    }
-
-    .nav-menu ul {
-        flex-direction: column;
-        /* Stack links vertically */
-        text-align: center;
-    }
-
-    .nav-menu li {
-        margin: 5px 0;
-        width: 100%;
-    }
 }
 
 
 
-/* --- 5. DESKTOP VIEW (>992px) --- */
-@media (min-width: 992px) {
-    .school-name h4 {
-        font-size: 1.4rem;
-    }
-
-    .nav-menu li {
-        margin-left: 15px;
-    }
-
-    /* Extra large desktop sizing from your code */
-    @media (min-width: 1300px) {
-        .nav-menu li a {
-            font-size: 1.3rem !important;
-            font-weight: 700;
-            margin-left: 20px;
-        }
-    }
-}
-
-/* --- TOGGLER ICON --- */
-.navbar-toggler-icon::before,
-.navbar-toggler-icon::after,
-.navbar-toggler-icon span {
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: #000000 !important;
-    transition: all 0.3s ease;
-    content: '';
-}
-
-.navbar-toggler-icon::before {
-    top: 0;
-}
-
-.navbar-toggler-icon span {
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.navbar-toggler-icon::after {
-    bottom: 0;
-}
-
-/* Toggler button styling - Blue color */
-.navbar-toggler {
-    border: 3px solid #000000 !important;
-    border-radius: 8px;
-    padding: 0.25rem 0.5rem;
-    margin-right: 8px;
-    transition: all 0.3s ease;
-}
-
-.navbar-toggler:hover {
-    background-color: rgba(37, 99, 235, 0.1);
-    background-color: rgba(37, 99, 235, 0.1);
-
-}
-
-/* Custom blue menu icon using CSS */
-.navbar-toggler-icon {
-    background-image: none !important;
-    position: relative;
-    display: inline-block;
-    width: 24px;
-    height: 18px;
-}
-
-
+/* --- HERO SECTION --- */
 .hero {
     position: relative;
-    background-image: linear-gradient(#022435b3),
-        url('about us image/test.jpeg');
-
-
-    background-size: cover;
-    background-position: center;
-    height: 360px;
+    height: 100vh;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #ffffff;
+    overflow: hidden;
+    text-align: center;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(3, 48, 89, 0.6), rgba(3, 48, 89, 0.85)),
+        url('about us image/test.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    padding: 0 25px;
+    max-width: 850px;
+    margin-top: 60px;
+}
+
+.hero h1 {
+    font-size: clamp(1.8rem, 8vw, 4rem);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    text-shadow: var(--text-shadow);
 }
 
 .hero-inner {
     z-index: 1;
 }
+
 
 .torn-divider {
     position: absolute;
@@ -213,46 +169,38 @@
     padding: 80px 20px;
 }
 
+/* --- FACULTY CARDS --- */
 
-.counter {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #00466c;
+/* This targets the white section from your previous image */
+.faculty-details {
+    background-color: #00466c; /* Dark Navy Blue */
+    padding: 20px;
+    border-bottom-left-radius: 10px;  /* Matches the card's rounded corners */
+    border-bottom-right-radius: 10px;
+    text-align: center;
 }
 
-.counter-box {
-    padding: 30px;
-    background: #f8f9fa;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
+.faculty-details h3 {
+    color: #ffffff;
+    margin-bottom: 5px;
 }
 
-.counter-box:hover {
-    transform: scale(1.05);
+.faculty-details p {
+    color: #d1d1d1; 
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    margin-bottom: 10px;
 }
 
-.card1:hover {
-    transform: scale(1.02);
-    box-shadow: 0 8px 11px rgba(0, 0, 0, 0.2);
-    transition: transform 0.4s;
+.dept-badge {
+    background-color: #007bff; /* Bright blue button */
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
 }
 
-.social-media :hover {
-    color: #0066ff;
-    transform: scale(1.1);
-    transition: transform 0.3s, color 0.3s;
-}
-
-.carousel {
-    margin-top: 90px;
-    margin-bottom: 0px;
-}
-
-.card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
-}
+/* --- VIDEO TESTIMONIALS --- */
 
 .video-section {
     position: relative;
@@ -289,109 +237,102 @@
     opacity: 0;
 }
 
-.value-icon {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, var(--primary-blue), var(--primary-emerald));
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 1rem;
-}
+/* --- CORE TESTIMONIALS --- */
 
-.value-icon i {
-    color: white;
-    font-size: 1.25rem;
-}
-
-.btn-primary-custom:hover {
-    background: #f1f5f9;
-    transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.card-hover {
-    transition: all 0.3s ease;
-    border: none;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.card-hover:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.15);
-}
-
-.icon-box {
-    width: 70px;
-    height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #00466c);
-    margin: 0 auto 15px auto;
-    color: white;
-    font-size: 32px;
-    transition: 0.3s ease-in-out;
+:root {
+    --primary: #003d5b;
+    --accent: #ffc107;
+    --text-main: #1a202c;
+    --text-light: #4a5568;
+    --white: #ffffff;
 }
 
 
-    .card-custom:hover .icon-box {
-        transform: scale(1.1);
-        filter: brightness(1.2);
-    }
+.features-container {
+    max-width: 1100px;
+    margin: -10px auto 30px;
+    /* Pulls cards up into the hero space */
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    position: relative;
+    z-index: 10;
+}
 
-   .navbar-custom {
-            background: #00466c;
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(100px);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1030;
-        }
-        :root {
-            --accent-glow: #e5eded;
-            
-            --item-spacing: 30px;
-            --slide-speed: 0.7s;
-            
-        }
+.feature-card {
 
-.card-custom {
-    transition: 0.3s ease-in-out;
-    border: 0;
-    padding: 30px 20px;
+    background: var(--white);
+    padding: 30px 25px;
+    /* Thinner padding */
     border-radius: 15px;
-    background: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.03);
 }
 
-.card-custom:hover {
+.feature-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 8px 50px rgba(0, 0, 0, 0);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
 }
 
-.card-custom:hover .icon-box {
-    transform: scale(1.1);
-    filter: brightness(1.2);
+.icon-circle {
+    width: 55px;
+    height: 55px;
+    /* Smaller icons */
+    background: #f0f7fa;
+    color: var(--primary);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    margin: 0 auto 20px;
+    transform: rotate(-5deg);
+    transition: 0.3s;
 }
 
-.navbar-custom {
-    background: #00466c;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(100px);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1030;
+.feature-card:hover .icon-circle {
+    background: var(--accent);
+    color: var(--primary);
+    transform: rotate(0deg);
 }
+
+.feature-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.feature-card p {
+    color: var(--text-light);
+    font-size: 0.85rem;
+    line-height: 1.6;
+}
+
+/* --- STATS COUNTER --- */
+
+.counter {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #00466c;
+}
+
+.counter-box {
+    padding: 30px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.counter-box:hover {
+    transform: scale(1.05);
+}
+
+   
 
 :root {
     --accent-glow: #e5eded;
@@ -541,6 +482,87 @@
     /* 1 card */
 }
 
+
+
+
+/* --- RESPONSIVE BREAKPOINTS --- */
+
+/* Tablet View (Screens under 1024px) */
+/* Mobile View (Screens under 600px) */
+@media (max-width: 600px) {
+    .section-title {
+        font-size: 1.4rem;
+        /* Smaller title */
+        margin-bottom: 20px;
+    }
+
+    .student-card {
+        width: 200px;
+        /* Reduced width significantly */
+        margin: 0 8px;
+        /* Tighter spacing */
+        padding: 17px;
+        /* Less internal padding */
+        border-radius: 6px;
+    }
+
+    .meet-text {
+        font-size: 0.6rem;
+        /* Tiny text at the top */
+        margin-bottom: 5px;
+    }
+
+    .student-img {
+        width: 65px;
+        /* Smaller profile picture */
+        height: 65px;
+        border-width: 2px;
+        margin: 8px auto;
+    }
+
+    .student-card h3 {
+        font-size: 0.85rem;
+        /* Smaller name */
+        margin: 5px 0;
+    }
+
+    .grade-badge {
+        font-size: 0.7rem;
+        /* Smaller grade box */
+        padding: 2px 10px;
+    }
+
+    .description {
+        font-size: 0.65rem;
+        /* Smallest readable text */
+        line-height: 1.2;
+        display: -webkit-box;
+        /* Limits description to 3 lines so cards stay short */
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .marquee-track {
+        animation-duration: 30s;
+        /* Faster speed for smaller track */
+    }
+}
+
+
+.navbar-custom {
+    background: #00466c;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(100px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1030;
+}
+
 .footer-bg {
     background: #022c43;
     color: #e5f7f8;
@@ -590,152 +612,4 @@
     border-left: 4px solid #25caeb;
     margin-top: 20px;
     margin-left: 10px;
-}
-
-:root {
-    --accent-glow: #e5eded;
-
-    --item-spacing: 30px;
-    --slide-speed: 0.7s;
-
-}
-
-.testimonial-section {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.header {
-    margin-top: 50px;
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.header h2 {
-    font-size: 2.5rem;
-    font-weight: 800;
-    color: var(--text-dark);
-}
-
-.header p {
-    color: var(--text-light);
-    margin-top: 10px;
-}
-
-/* The Viewport Container */
-.slider-container {
-    position: relative;
-    overflow: hidden;
-    /* This hides the cards outside the 3-card window */
-    padding: 20px 0;
-}
-
-/* The Moving Track */
-.testimonial-track {
-    display: flex;
-    gap: 24px;
-    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
-    will-change: transform;
-}
-
-/* Individual Card Styling */
-.testimonial-card {
-    background: var(--card-white);
-    padding: 40px;
-    border-radius: 24px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-    /* Flex-basis logic: 3 cards minus the gaps */
-    flex: 0 0 calc((100% / 3) - 16px);
-    display: flex;
-    flex-direction: column;
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease;
-}
-
-.testimonial-card:hover {
-    transform: translateY(-5px);
-}
-
-.quote {
-    font-size: 1.1rem;
-    line-height: 1.7;
-    color: #374151;
-    margin-bottom: 25px;
-    flex-grow: 1;
-}
-
-.user-profile {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.user-profile img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-.user-info h4 {
-    font-size: 1rem;
-    color: var(--text-dark);
-}
-
-.user-info p {
-    font-size: 0.85rem;
-    color: var(--primary);
-    font-weight: 600;
-}
-
-/* Navigation Buttons */
-.controls {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-.nav-btn {
-    background: var(--card-white);
-    border: 2px solid #00399b98;
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    transition: all 0.2s ease;
-}
-
-.nav-btn:hover {
-    background: rgba(0, 46, 111, 0.799);
-    color: rgb(255, 255, 255);
-    border-color: var(--primary);
-}
-
-/* Responsive Breakpoints */
-@media (max-width: 1024px) {
-    .testimonial-card {
-        flex: 0 0 calc(50% - 12px);
-    }
-
-    /* 2 cards */
-}
-
-@media (max-width: 640px) {
-    .testimonial-card {
-        flex: 0 0 100%;
-    }
-
-    /* 1 card */
-}
-
-@media (max-width: 640px) {
-    .disapear-card {
-        display: none !important;
-    }
 }
