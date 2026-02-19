@@ -336,7 +336,7 @@
     transition: 0.3s ease-in-out;
 }
 
-<<<<<<< HEAD
+
     .card-custom:hover .icon-box {
         transform: scale(1.1);
         filter: brightness(1.2);
@@ -361,7 +361,7 @@
             --slide-speed: 0.7s;
             
         }
-=======
+
 .card-custom {
     transition: 0.3s ease-in-out;
     border: 0;
@@ -400,7 +400,7 @@
     --slide-speed: 0.7s;
 
 }
->>>>>>> 2b93537d67c8ecd25834457c08a26192072e5376
+
 
 .testimonial-section {
     max-width: 1200px;
